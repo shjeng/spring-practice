@@ -8,6 +8,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class XmlAppContext {
 
+    // 다양한 설정 형식 지원 - 자바 코드, xml
     @Test
     void xmlAppcontext() {
         GenericXmlApplicationContext ac = new GenericXmlApplicationContext("appConfig.xml");
