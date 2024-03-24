@@ -17,22 +17,22 @@ public class AppConfig {
     // @Bean memberService -> new MemoeryMemberRepository()
     // @Bean orderService -> new MemoeryMemberRepository()
 
-
-    @Bean
-    public MemberService memberService() {
-        return new MemberServiceImpl(memberRepository());
-    }
-    @Bean
-    public OrderService orderService() {
-        return new OrderServiceImpl(memberRepository(), discountPolicy());
-    }
-    @Bean
-    public MemberRepository memberRepository() {
-        return new MemoryMemberRepository();
-    }
-    @Bean
-    public DiscountPolicy discountPolicy() {
-        return new RateDiscountPolicy();
-    }
+//
+//    @Bean
+//    public MemberService memberService() {
+//        return new MemberServiceImpl(memberRepository());
+//    }
+//    @Bean
+//    public OrderService orderService() {
+//        return new OrderServiceImpl(memberRepository(), discountPolicy());
+//    }
+//    @Bean
+//    public MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
+//    @Bean
+//    public DiscountPolicy discountPolicy() {
+//        return new RateDiscountPolicy();
+//    }
 
 }
