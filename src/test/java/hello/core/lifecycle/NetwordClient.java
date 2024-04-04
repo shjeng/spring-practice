@@ -1,5 +1,8 @@
 package hello.core.lifecycle;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
 public class NetwordClient  {
     private String url;
 
@@ -26,12 +29,14 @@ public class NetwordClient  {
         System.out.println("close: " + url);
     }
 
+    @PostConstruct
     public void init() throws Exception {
         System.out.println("NetwordClient.init");
         connect();
         call("초기화 연결 메시지");
     }
 
+    @PreDestroy
     public void close() throws Exception {
         System.out.println("NetwordClient.close");
         disconnect();
