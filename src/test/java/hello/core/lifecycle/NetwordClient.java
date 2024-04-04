@@ -1,9 +1,6 @@
 package hello.core.lifecycle;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-
-public class NetwordClient implements InitializingBean, DisposableBean {
+public class NetwordClient  {
     private String url;
 
     public NetwordClient() {
@@ -29,16 +26,14 @@ public class NetwordClient implements InitializingBean, DisposableBean {
         System.out.println("close: " + url);
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("NetwordClient.afterPropertiesSet");
+    public void init() throws Exception {
+        System.out.println("NetwordClient.init");
         connect();
         call("초기화 연결 메시지");
     }
 
-    @Override
-    public void destroy() throws Exception {
-        System.out.println("NetwordClient.destroy");
+    public void close() throws Exception {
+        System.out.println("NetwordClient.close");
         disconnect();
     }
 }
