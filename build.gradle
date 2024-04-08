@@ -27,6 +27,8 @@ dependencies {
 //	implementation 'javax.inject:javax.inject:1' // 프로토타입 스코프 - 싱글톤 빈과 함께 사용시 Provider 문제 해결 때 추가, 스프링 부트 3버전부터 오류
 	implementation 'jakarta.inject:jakarta.inject-api:2.0.1'
 
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
